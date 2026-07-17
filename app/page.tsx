@@ -53,10 +53,6 @@ export default function Home() {
               <Link href="/regiones" className={cn(buttonVariants({ size: "lg" }), "rounded-full gap-2 h-12 px-8 text-md")}>
                 Explorar Consejos <ArrowRight className="h-4 w-4" />
               </Link>
-              <Button size="lg" variant="outline" className="rounded-full gap-2 h-12 px-8 text-md bg-background/50 backdrop-blur-md">
-                <Database className="h-4 w-4" />
-                Datos Abiertos
-              </Button>
             </div>
           </motion.div>
 

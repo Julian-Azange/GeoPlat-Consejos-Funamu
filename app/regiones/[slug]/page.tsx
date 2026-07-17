@@ -214,14 +214,14 @@ export default function RegionStoryMapPage({ params }: { params: Promise<{ slug:
         <div className="flex flex-col lg:flex-row relative">
           
           {/* Fixed Media (Map) */}
-          <div className="lg:w-1/2 sticky top-24 h-[50vh] lg:h-[calc(100vh-6rem)] z-10 p-6 lg:pl-12 lg:pr-8 flex flex-col justify-center">
+          <div className="lg:w-1/2 relative lg:sticky top-24 h-[50vh] lg:h-[calc(100vh-6rem)] z-10 p-6 lg:pl-12 lg:pr-8 flex flex-col justify-center">
              <div className="w-full h-full rounded-3xl overflow-hidden shadow-lg border border-border/50 bg-muted/30">
                <InteractiveMap />
              </div>
           </div>
 
           {/* Scrolling Narrative Cards */}
-          <div className="lg:w-1/2 px-6 py-20 lg:py-32 lg:px-16 xl:px-24 flex flex-col justify-center">
+          <div className="lg:w-1/2 px-6 pb-20 pt-4 lg:py-32 lg:px-16 xl:px-24 flex flex-col justify-center">
             <div className="space-y-24 w-full max-w-2xl mx-auto">
               
               <motion.div 
