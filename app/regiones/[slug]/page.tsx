@@ -188,6 +188,7 @@ export default function RegionStoryMapPage({ params }: { params: Promise<{ slug:
               return <div key={section.id} id={section.id}>{content}</div>;
             }
 
+            
             return (
               <motion.div
                 key={section.id}
