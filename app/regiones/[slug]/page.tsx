@@ -45,134 +45,134 @@ export default function RegionStoryMapPage({ params }: { params: Promise<{ slug:
             let content;
             switch (component) {
               case "HeroPortada":
-                content = <Widgets.HeroPortada {...(props as any)} />;
+                content = <Widgets.HeroPortada {...(props as unknown as React.ComponentProps<typeof Widgets.HeroPortada>)} />;
                 break;
               case "TitleH1":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.TitleH1 {...(props as React.ComponentProps<typeof Widgets.TitleH1>)} />
+                    <Widgets.TitleH1 {...(props as unknown as React.ComponentProps<typeof Widgets.TitleH1>)} />
                   </div>
                 );
                 break;
               case "ConsejosMenoresViewer":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.ConsejosMenoresViewer {...(props as React.ComponentProps<typeof Widgets.ConsejosMenoresViewer>)} />
+                    <Widgets.ConsejosMenoresViewer {...(props as unknown as React.ComponentProps<typeof Widgets.ConsejosMenoresViewer>)} />
                   </div>
                 );
                 break;
               case "TitleH2":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.TitleH2 {...(props as React.ComponentProps<typeof Widgets.TitleH2>)} />
+                    <Widgets.TitleH2 {...(props as unknown as React.ComponentProps<typeof Widgets.TitleH2>)} />
                   </div>
                 );
                 break;
               case "TitleH3":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.TitleH3 {...(props as React.ComponentProps<typeof Widgets.TitleH3>)} />
+                    <Widgets.TitleH3 {...(props as unknown as React.ComponentProps<typeof Widgets.TitleH3>)} />
                   </div>
                 );
                 break;
               case "NarrativeIntroQuote":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.NarrativeIntroQuote {...(props as any)} />
+                    <Widgets.NarrativeIntroQuote {...(props as unknown as React.ComponentProps<typeof Widgets.NarrativeIntroQuote>)} />
                   </div>
                 );
                 break;
               case "NarrativeParagraph":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.NarrativeParagraph {...(props as any)} />
+                    <Widgets.NarrativeParagraph {...(props as unknown as React.ComponentProps<typeof Widgets.NarrativeParagraph>)} />
                   </div>
                 );
                 break;
               case "NarrativeOralHeritageQuote":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.NarrativeOralHeritageQuote {...(props as any)} />
+                    <Widgets.NarrativeOralHeritageQuote {...(props as unknown as React.ComponentProps<typeof Widgets.NarrativeOralHeritageQuote>)} />
                   </div>
                 );
                 break;
               case "MediaBentoGrid":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.MediaBentoGrid {...(props as any)} />
+                    <Widgets.MediaBentoGrid {...(props as unknown as React.ComponentProps<typeof Widgets.MediaBentoGrid>)} />
                   </div>
                 );
                 break;
               case "MediaInfiniteScrollGallery":
-                content = <Widgets.MediaInfiniteScrollGallery {...(props as any)} />;
+                content = <Widgets.MediaInfiniteScrollGallery {...(props as unknown as React.ComponentProps<typeof Widgets.MediaInfiniteScrollGallery>)} />;
                 break;
               case "MediaImageCompareSlider":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.MediaImageCompareSlider {...(props as any)} />
+                    <Widgets.MediaImageCompareSlider {...(props as unknown as React.ComponentProps<typeof Widgets.MediaImageCompareSlider>)} />
                   </div>
                 );
                 break;
               case "MediaHotspotViewer":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.MediaHotspotViewer {...(props as any)} />
+                    <Widgets.MediaHotspotViewer {...(props as unknown as React.ComponentProps<typeof Widgets.MediaHotspotViewer>)} />
                   </div>
                 );
                 break;
               case "MediaFolderQRCard":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.MediaFolderQRCard {...(props as any)} />
+                    <Widgets.MediaFolderQRCard {...(props as unknown as React.ComponentProps<typeof Widgets.MediaFolderQRCard>)} />
                   </div>
                 );
                 break;
               case "MapLayerViewer":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.MapLayerViewer {...(props as React.ComponentProps<typeof Widgets.MapLayerViewer>)} />
+                    <Widgets.MapLayerViewer {...(props as unknown as React.ComponentProps<typeof Widgets.MapLayerViewer>)} />
                   </div>
                 );
                 break;
               case "MapSwipeViewer":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.MapSwipeViewer {...(props as any)} />
+                    <Widgets.MapSwipeViewer {...(props as unknown as React.ComponentProps<typeof Widgets.MapSwipeViewer>)} />
                   </div>
                 );
                 break;
               case "NarrativeTimelineSteps":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.NarrativeTimelineSteps {...(props as any)} />
+                    <Widgets.NarrativeTimelineSteps {...(props as unknown as React.ComponentProps<typeof Widgets.NarrativeTimelineSteps>)} />
                   </div>
                 );
                 break;
               case "DataStatsGrid":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.DataStatsGrid {...(props as any)} />
+                    <Widgets.DataStatsGrid {...(props as unknown as React.ComponentProps<typeof Widgets.DataStatsGrid>)} />
                   </div>
                 );
                 break;
               case "DataChartContainer":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.DataChartContainer {...(props as any)} />
+                    <Widgets.DataChartContainer {...(props as unknown as React.ComponentProps<typeof Widgets.DataChartContainer>)} />
                   </div>
                 );
                 break;
               case "DataEquipmentGrid":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.DataEquipmentGrid {...(props as any)} />
+                    <Widgets.DataEquipmentGrid {...(props as unknown as React.ComponentProps<typeof Widgets.DataEquipmentGrid>)} />
                   </div>
                 );
                 break;
               case "SpeciesFlipGrid":
                 content = (
                   <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
-                    <Widgets.SpeciesFlipGrid {...(props as any)} />
+                    <Widgets.SpeciesFlipGrid {...(props as unknown as React.ComponentProps<typeof Widgets.SpeciesFlipGrid>)} />
                   </div>
                 );
                 break;

@@ -9,7 +9,7 @@ import * as Icons from "lucide-react";
 
 // Helper to resolve dynamic icons
 const DynamicIcon = ({ name, className = "h-5 w-5" }: { name: string; className?: string }) => {
-  const IconComponent = (Icons as any)[name];
+  const IconComponent = (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[name];
   return IconComponent ? <IconComponent className={className} /> : <Icons.HelpCircle className={className} />;
 };
 

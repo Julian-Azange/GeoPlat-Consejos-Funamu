@@ -9,7 +9,7 @@ import * as Icons from "lucide-react";
 
 // Helper to resolve dynamic icons
 const DynamicIcon = ({ name, className = "h-5 w-5" }: { name: string; className?: string }) => {
-  const IconComponent = (Icons as any)[name];
+  const IconComponent = (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[name];
   return IconComponent ? <IconComponent className={className} /> : <Icons.HelpCircle className={className} />;
 };
 
@@ -219,7 +219,7 @@ export function NarrativeOralHeritageQuote({
     blue: "text-blue-500 bg-blue-500/10 border-blue-500/20",
   };
 
-  const selectedColor = (colorMap as any)[highlightColor] || colorMap.emerald;
+  const selectedColor = colorMap[highlightColor as keyof typeof colorMap] || colorMap.emerald;
 
   return (
     <div className="w-full my-12 max-w-4xl mx-auto px-4">
