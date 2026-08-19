@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "councilSlug": "mayor-de-villa-conto-dinamico",
+  "councilName": "C.C. Mayor de Villa Conto (Dinámico)",
+  "meta": {
+    "version": "1.0.0",
+    "updatedAt": "2026-08-14"
+  },
+  "sections": [
+    {
+      "id": "portada",
+      "component": "HeroPortada",
+      "props": {
+        "title": "C.C. Mayor de Villa Conto",
+        "subtitle": "Legados que inspiran",
+        "convenioText": "Fundación Afrocolombianos Unidos por la Cultura y los Derechos Humanos",
+        "bgImageUrl": "/assets/hero/villa-conto.jpg",
+        "logos": []
+      }
+    },
+    {
+      "id": "intro-cita",
+      "component": "NarrativeIntroQuote",
+      "props": {
+        "eyebrow": "El Corazón del Territorio",
+        "quote": "El territorio colectivo del Consejo Comunitario Mayor de Villa Conto, ubicado en el municipio de Río Quito (Chocó), se encuentra conformado por varias comunidades a lo largo de la cuenca del río Quito y sus afluentes."
+      }
+    },
+    {
+      "id": "intro-parrafo",
+      "component": "NarrativeParagraph",
+      "props": {
+        "text": "Estas comunidades mantienen una estrecha relación con los ecosistemas forestales y fluviales del territorio, conservando prácticas tradicionales de ocupación, producción y aprovechamiento sostenible de los recursos naturales."
+      }
+    },
+    {
+      "id": "medios-de-vida-scroll",
+      "component": "MediaInfiniteScrollGallery",
+      "props": {
+        "title": "El Corazón del Territorio",
+        "subtitle": "MEDIOS DE VIDA",
+        "images": [
+          "/assets/medios-de-vida/medio-vida-1.jpg",
+          "/assets/medios-de-vida/medio-vida-2.jpg",
+          "/assets/medios-de-vida/medio-vida-3.jpg",
+          "/assets/medios-de-vida/medio-vida-4.jpg",
+          "/assets/medios-de-vida/medio-vida-5.jpg",
+          "/assets/medios-de-vida/medio-vida-6.jpg"
+        ]
+      }
+    },
+    {
+      "id": "titulo-mapa-capas",
+      "component": "TitleH1",
+      "props": {
+        "text": "INFORMACIÓN CONSEJO COMUNITARIO MAYOR DE VILLA CONTO",
+        "mt": "mt-16",
+        "mb": "mb-2",
+        "align": "center",
+        "showLine": true
+      }
+    },
+    {
+      "id": "croquis-general-mapa",
+      "component": "MapLayerViewer",
+      "props": {
+        "basemap": "satellite",
+        "center": [
+          5.63,
+          -76.8
+        ],
+        "zoom": 12,
+        "layers": [
+          {
+            "id": "limite-general",
+            "name": "Límite Colectivo Villa Conto",
+            "color": "#16a34a",
+            "geojsonUrl": "/data/Consejo_comunitario_Mayor_Villa_Conto.geojson",
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "kpis-generales",
+      "component": "DataStatsGrid",
+      "props": {
+        "stats": [
+          {
+            "label": "Territorio Titulado",
+            "value": "27.521",
+            "unit": "ha",
+            "icon": "Trees",
+            "colorTheme": "emerald"
+          },
+          {
+            "label": "Familias Beneficiarias",
+            "value": "1.080",
+            "unit": "familias",
+            "icon": "Users",
+            "colorTheme": "blue"
+          },
+          {
+            "label": "Población Aproximada",
+            "value": "4.500",
+            "unit": "personas",
+            "icon": "Home",
+            "colorTheme": "amber"
+          }
+        ]
+      }
+    },
+    {
+      "id": "parrafo-mapa-capas",
+      "component": "NarrativeParagraph",
+      "props": {
+        "text": "El territorio colectivo comprende una extensión aproximada de 29.650 hectáreas y está conformado por seis Consejos Comunitarios Menores: Boca de Partadó, Chiviguidó, Chiguarandó, Loma Pueblo Nuevo, Boca de Paimadó y Antadó La Punta, los cuales se encuentran distribuidos estratégicamente dentro del territorio y constituyen la base de la organización social, administrativa y comunitaria del Consejo Comunitario Mayor. Cada uno de estos consejos menores conserva dinámicas propias de ocupación, producción, organización y manejo del territorio, fortaleciendo la gobernanza colectiva y la participación comunitaria en la toma de decisiones."
+      }
+    },
+    {
+      "id": "consejos-menores-interactivo",
+      "component": "ConsejosMenoresViewer",
+      "props": {
+        "basemap": "satellite",
+        "generalGeojsonUrl": "/data/Consejo_comunitario_Mayor_Villa_Conto.geojson",
+        "minorGeojsonUrl": "/data/Cabeceras_Princiales.geojson",
+        "councils": [
+          {
+            "name": "VILLA CONTO",
+            "area": "240.124 m²",
+            "perimeter": "2.691 m",
+            "description": "Espacio para la descripción de Villa Conto...",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-1.jpg"
+          },
+          {
+            "name": "BOCA DE PARTADÓ",
+            "area": "7.208 m²",
+            "perimeter": "486 m",
+            "description": "Espacio para la descripción de Boca de Partadó...",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-2.jpg"
+          },
+          {
+            "name": "CHIGUARANDÓ ALTO",
+            "area": "23.868 m²",
+            "perimeter": "802 m",
+            "description": "Espacio para la descripción de Chiguarandó Alto...",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-3.jpg"
+          },
+          {
+            "name": "CHIVIGUIDÓ",
+            "area": "15.206 m²",
+            "perimeter": "641 m",
+            "description": "La comunidad de Chiviguidó se localiza en el corredor central del territorio colectivo y presenta una estrecha relación con los sistemas fluviales que estructuran la movilidad y conectividad regional. Sus actividades económicas se sustentan principalmente en la agricultura tradicional, la pesca y el aprovechamiento de productos del bosque. La comunidad constituye además un punto de referencia para las dinámicas de ocupación y poblamiento histórico dentro del territorio de Villa Conto.",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-4.jpg"
+          },
+          {
+            "name": "LOMA PUEBLO NUEVO",
+            "area": "47.437 m²",
+            "perimeter": "1.153 m",
+            "description": "Espacio para la descripción de Loma Pueblo Nuevo...",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-5.jpg"
+          },
+          {
+            "name": "BOCAS DE PAIMADÓ",
+            "area": "17.775 m²",
+            "perimeter": "573 m",
+            "description": "Espacio para la descripción de Bocas de Paimadó...",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-6.jpg"
+          },
+          {
+            "name": "ANTADÓ LA PUNTA",
+            "area": "12.590 m²",
+            "perimeter": "514 m",
+            "description": "Espacio para la descripción de Antadó La Punta...",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-1.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "equipamientos-comunes",
+      "component": "DataEquipmentGrid",
+      "props": {
+        "equipments": [
+          {
+            "id": 1,
+            "name": "Sistema de Acueducto",
+            "category": "Servicios Públicos",
+            "icon": "Droplet",
+            "description": "Sistema que abastece de agua potable a la comunidad de Villa Conto.",
+            "imageUrl": "/assets/equipamientos/acueducto.jpg"
+          },
+          {
+            "id": 2,
+            "name": "I.E. Doña Mercedes",
+            "category": "Educación",
+            "icon": "GraduationCap",
+            "description": "Espacio dedicado a la formación de niños, niñas y jóvenes locales.",
+            "imageUrl": "/assets/equipamientos/institucion-educativa.jpg"
+          },
+          {
+            "id": 3,
+            "name": "Cancha Deportiva",
+            "category": "Recreación",
+            "icon": "Activity",
+            "description": "Espacio polideportivo comunal para la recreación e integración social.",
+            "imageUrl": "/assets/equipamientos/cancha.jpg"
+          },
+          {
+            "id": 4,
+            "name": "Templo Parroquial",
+            "category": "Cultura y Espiritualidad",
+            "icon": "Church",
+            "description": "Lugar de encuentro espiritual y litúrgico de la comunidad.",
+            "imageUrl": "/assets/equipamientos/iglesia.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mapa-swipe-comparativo",
+      "component": "MapSwipeViewer",
+      "props": {
+        "center": [
+          5.63,
+          -76.8
+        ],
+        "zoom": 12,
+        "leftLayer": {
+          "name": "Límite General (Croquis)",
+          "geojsonUrl": "/data/Consejo_comunitario_Mayor_Villa_Conto.geojson"
+        },
+        "rightLayer": {
+          "name": "Coberturas y Uso de la Tierra",
+          "geojsonUrl": "/data/Cobertura_y_Uso_tierra.geojson"
+        }
+      }
+    },
+    {
+      "id": "grafico-demografia",
+      "component": "DataChartContainer",
+      "props": {
+        "chartType": "pie",
+        "title": "Demografía por Sexo (Hogares)",
+        "description": "Distribución del género de los representantes de hogares encuestados.",
+        "series": [
+          {
+            "name": "Hombre",
+            "value": 20
+          },
+          {
+            "name": "Mujer",
+            "value": 4
+          },
+          {
+            "name": "Otro",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "grafico-agua",
+      "component": "DataChartContainer",
+      "props": {
+        "chartType": "horizontalBar",
+        "title": "Método de Tratamiento de Agua para Consumo",
+        "description": "Distribución porcentual de prácticas de saneamiento en viviendas.",
+        "series": [
+          {
+            "name": "Ninguno",
+            "value": 80
+          },
+          {
+            "name": "Hervir",
+            "value": 16
+          },
+          {
+            "name": "Filtrar",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "grafico-coberturas",
+      "component": "DataChartContainer",
+      "props": {
+        "chartType": "bar",
+        "title": "Análisis de Cobertura de la Tierra (CORINE Land Cover)",
+        "description": "Área aproximada en hectáreas dentro del polígono colectivo.",
+        "series": [
+          {
+            "name": "Bosque Denso",
+            "value": 24675
+          },
+          {
+            "name": "Extracción Minera",
+            "value": 1523
+          },
+          {
+            "name": "Tierras degradadas",
+            "value": 813
+          },
+          {
+            "name": "Ríos",
+            "value": 400
+          },
+          {
+            "name": "Bosque fragmentado",
+            "value": 38
+          }
+        ]
+      }
+    },
+    {
+      "id": "fauna-flip",
+      "component": "SpeciesFlipGrid",
+      "props": {
+        "category": "Fauna Silvestre Avistada",
+        "species": [
+          {
+            "name": "Guara",
+            "scientificName": "Dasyprocta punctata",
+            "backDescription": "Roedor mediano diurno. Se alimenta de frutos y es un reforestador clave al enterrar semillas de palmas.",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-2.jpg"
+          },
+          {
+            "name": "Gurre",
+            "scientificName": "Dasypus novemcinctus",
+            "backDescription": "Conocido localmente como armadillo. Excava madrigueras oxigenando el suelo y controla poblaciones de insectos.",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-3.jpg"
+          },
+          {
+            "name": "Boruga (Lapa)",
+            "scientificName": "Cuniculus paca",
+            "backDescription": "De hábitos nocturnos, vive cerca a fuentes de agua. Consumidor e importante dispersor de semillas del sotobosque.",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-5.jpg"
+          },
+          {
+            "name": "Oso Perezoso",
+            "scientificName": "Bradypus variegatus",
+            "backDescription": "Habita en el dosel de los árboles alimentándose de hojas de yarumo. Su presencia indica estabilidad en bosques maduros.",
+            "imageUrl": "/assets/medios-de-vida/medio-vida-6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bento-gallery-qa",
+      "component": "MediaBentoGrid",
+      "props": {
+        "title": "Galería de Vida Comunitaria (Bento Grid)",
+        "images": [
+          {
+            "url": "/assets/medios-de-vida/medio-vida-1.jpg",
+            "caption": "Pescadores locales al amanecer",
+            "alt": "Pesca tradicional",
+            "spanClass": "md:col-span-2 md:row-span-2"
+          },
+          {
+            "url": "/assets/medios-de-vida/medio-vida-2.jpg",
+            "caption": "Reunión de sabedores",
+            "alt": "Sabedores comunitarios",
+            "spanClass": "md:col-span-1 md:row-span-1"
+          },
+          {
+            "url": "/assets/medios-de-vida/medio-vida-3.jpg",
+            "caption": "Trabajo de cartografía",
+            "alt": "Cartografía participativa",
+            "spanClass": "md:col-span-1 md:row-span-1"
+          },
+          {
+            "url": "/assets/medios-de-vida/medio-vida-4.jpg",
+            "caption": "Bosque y quebradas",
+            "alt": "Zonas boscosas",
+            "spanClass": "md:col-span-2 md:row-span-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hotspots-territorio-qa",
+      "component": "MediaHotspotViewer",
+      "props": {
+        "bgImageUrl": "/assets/medios-de-vida/medio-vida-1.jpg",
+        "hotspots": [
+          {
+            "id": 1,
+            "x": 25,
+            "y": 45,
+            "title": "Puerto de Embarque",
+            "description": "Lugar principal de salida de las canoas de la comunidad.",
+            "icon": "Anchor"
+          },
+          {
+            "id": 2,
+            "x": 60,
+            "y": 30,
+            "title": "Nacedero Forestal",
+            "description": "Zona de recarga hídrica protegida por acuerdo comunitario.",
+            "icon": "Trees"
+          },
+          {
+            "id": 3,
+            "x": 75,
+            "y": 70,
+            "title": "Cancha Comunal",
+            "description": "Punto de encuentro deportivo para los jóvenes locales.",
+            "icon": "Activity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quote-sabiduria-qa",
+      "component": "NarrativeOralHeritageQuote",
+      "props": {
+        "quote": "Nuestros ríos y bosques no son mercancías; son la prolongación de la vida misma, heredada de los mayores para la felicidad de los que vienen detrás.",
+        "authorName": "Alfonso Conto",
+        "authorRole": "Mayor y Sabedor Tradicional",
+        "highlightColor": "amber"
+      }
+    },
+    {
+      "id": "archivos-qr-folder",
+      "component": "MediaFolderQRCard",
+      "props": {
+        "folderName": "Galería y Evidencias de Campo Villa Conto",
+        "qrCodeUrl": "/assets/logos/logo-funamu.png",
+        "externalLink": "https://drive.google.com/drive/folders/villa-conto-eves",
+        "fileCount": 12,
+        "files": [
+          {
+            "url": "/assets/medios-de-vida/medio-vida-1.jpg",
+            "description": "Socialización de la cartilla en la sede comunitaria"
+          },
+          {
+            "url": "/assets/medios-de-vida/medio-vida-2.jpg",
+            "description": "Recorrido de campo para georreferenciación de linderos"
+          },
+          {
+            "url": "/assets/medios-de-vida/medio-vida-3.jpg",
+            "description": "Firma de actas de linderos con consejos colindantes"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -21,15 +21,190 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { useFakeLoading } from "@/hooks/useFakeLoading";
 import { Skeleton } from "@/components/ui/skeleton";
 
+import * as Widgets from "@/components/widgets";
+import villaContoDinamicoConfig from "@/data/mayor-de-villa-conto-dinamico.json";
+
 export default function RegionStoryMapPage({ params }: { params: Promise<{ slug: string }> }) {
   const isLoading = useFakeLoading(1200);
   const resolvedParams = use(params);
+  const slug = resolvedParams.slug;
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const carouselImages = [1, 2, 3, 4, 5, 6];
-  const region = regionsMock.find(r => r.slug === resolvedParams.slug);
+  const region = regionsMock.find(r => r.slug === slug);
 
   if (!region) {
     notFound();
+  }
+
+  if (slug === "mayor-de-villa-conto-dinamico") {
+    return (
+      <PageTransition>
+        <div className="bg-background min-h-screen text-foreground pb-20">
+          {villaContoDinamicoConfig.sections.map((section) => {
+            const { component, props } = section;
+            let content;
+            switch (component) {
+              case "HeroPortada":
+                content = <Widgets.HeroPortada {...(props as any)} />;
+                break;
+              case "TitleH1":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.TitleH1 {...(props as React.ComponentProps<typeof Widgets.TitleH1>)} />
+                  </div>
+                );
+                break;
+              case "ConsejosMenoresViewer":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.ConsejosMenoresViewer {...(props as React.ComponentProps<typeof Widgets.ConsejosMenoresViewer>)} />
+                  </div>
+                );
+                break;
+              case "TitleH2":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.TitleH2 {...(props as React.ComponentProps<typeof Widgets.TitleH2>)} />
+                  </div>
+                );
+                break;
+              case "TitleH3":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.TitleH3 {...(props as React.ComponentProps<typeof Widgets.TitleH3>)} />
+                  </div>
+                );
+                break;
+              case "NarrativeIntroQuote":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.NarrativeIntroQuote {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "NarrativeParagraph":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.NarrativeParagraph {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "NarrativeOralHeritageQuote":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.NarrativeOralHeritageQuote {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "MediaBentoGrid":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.MediaBentoGrid {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "MediaInfiniteScrollGallery":
+                content = <Widgets.MediaInfiniteScrollGallery {...(props as any)} />;
+                break;
+              case "MediaImageCompareSlider":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.MediaImageCompareSlider {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "MediaHotspotViewer":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.MediaHotspotViewer {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "MediaFolderQRCard":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.MediaFolderQRCard {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "MapLayerViewer":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.MapLayerViewer {...(props as React.ComponentProps<typeof Widgets.MapLayerViewer>)} />
+                  </div>
+                );
+                break;
+              case "MapSwipeViewer":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.MapSwipeViewer {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "NarrativeTimelineSteps":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.NarrativeTimelineSteps {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "DataStatsGrid":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.DataStatsGrid {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "DataChartContainer":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.DataChartContainer {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "DataEquipmentGrid":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.DataEquipmentGrid {...(props as any)} />
+                  </div>
+                );
+                break;
+              case "SpeciesFlipGrid":
+                content = (
+                  <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-6xl">
+                    <Widgets.SpeciesFlipGrid {...(props as any)} />
+                  </div>
+                );
+                break;
+              default:
+                content = (
+                  <div className="p-4 bg-red-100 text-red-800">
+                    Componente {component} no soportado.
+                  </div>
+                );
+            }
+
+            if (component === "HeroPortada") {
+              return <div key={section.id} id={section.id}>{content}</div>;
+            }
+
+            return (
+              <motion.div
+                key={section.id}
+                id={section.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="py-12 md:py-16 animate-section"
+              >
+                {content}
+              </motion.div>
+            );
+          })}
+        </div>
+      </PageTransition>
+    );
   }
 
   // Real Data Extracted from ArcGIS StoryMap

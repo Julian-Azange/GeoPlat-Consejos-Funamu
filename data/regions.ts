@@ -12,6 +12,16 @@ export const regionsMock: Region[] = [
     imageUrl: "/assets/hero/villa-conto.jpg",
   },
   {
+    id: "21",
+    slug: "mayor-de-villa-conto-dinamico",
+    name: "C.C. Mayor de Villa Conto (Dinámico)",
+    description: "Versión dinámica de la cartilla territorial estructurada a partir de widgets dinámicos e impulsada por JSON.",
+    municipalitiesCount: 1,
+    projectsCount: 12,
+    indicatorsCount: 5,
+    imageUrl: "/assets/hero/villa-conto.jpg",
+  },
+  {
     id: "2",
     slug: "afro-san-luis",
     name: "C.C. Afro San Luis",
