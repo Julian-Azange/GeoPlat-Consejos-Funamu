@@ -36,7 +36,7 @@ export default function RegionStoryMapPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  if (slug === "mayor-de-villa-conto-dinamico") {
+  if (slug === "villa-conto-dinamico") {
     return (
       <PageTransition>
         <div className="bg-background min-h-screen text-foreground pb-20">

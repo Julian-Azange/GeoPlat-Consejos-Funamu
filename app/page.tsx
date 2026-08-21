@@ -14,6 +14,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useFakeLoading } from "@/hooks/useFakeLoading";
 import { Skeleton } from "@/components/ui/skeleton";
+import { QrExporter } from "@/components/qr/QrExporter";
 
 export default function Home() {
   const isLoading = useFakeLoading(1500);
@@ -196,6 +197,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* QR Codes Download Section */}
+      <section className="pb-24">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <QrExporter />
+        </div>
+      </section>
 
     </PageTransition>
   );
