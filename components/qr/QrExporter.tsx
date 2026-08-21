@@ -40,7 +40,6 @@ export function QrExporter() {
         const qrBase64 = await QRCode.toDataURL(url, {
           width: 600,
           margin: 2,
-          radius: 15,
           color: {
             dark: "#0f341b",
             light: "#ffffff",
